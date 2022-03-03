@@ -5,6 +5,8 @@ import com.atguigu.userprofile.utils.DateStyle;
 import com.atguigu.userprofile.utils.DateUtil;
 import com.atguigu.userprofile.utils.SparkUtils;
 import lombok.Data;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
@@ -19,6 +21,10 @@ import java.util.stream.Collectors;
 public class RemindEtl {
 
     public static void main(String[] args) {
+//        Logger.getLogger("org").setLevel(Level.OFF);
+//        Logger.getLogger("com").setLevel(Level.OFF);
+//        System.setProperty("spark.ui.showConsoleProgress", "false");
+//        Logger.getRootLogger().setLevel(Level.OFF);
 
         SparkSession session = SparkUtils.initSession();
 
